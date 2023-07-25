@@ -1,5 +1,10 @@
 #include <iostream>
 
+// This code demonstrates how the Curiously Recurring Template Pattern (CRTP) works 
+// in C++. It shows how you can use CRTP to achieve static (compile-time) polymorphism, 
+// as an alternative to the more traditional dynamic (run-time) polymorphism achieved 
+// with virtual functions.
+
 // The common "Character" interface, which uses the Curiously Recurring Template Pattern (CRTP)
 template <typename T>
 struct Character
