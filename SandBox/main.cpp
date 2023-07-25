@@ -59,10 +59,10 @@ void triggerAttackActionRef(Character<T>& character)
 
 // A function that accepts any Character type and triggers their attack action
 template <typename T>
-void triggerAttackActionPtr(Character<T>* character)
+void triggerAttackActionPtr(Character<T>* pCharacter)
 {
 
-    character->performAttack();
+    pCharacter->performAttack();
 }
 int main()
 {
