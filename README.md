@@ -18,3 +18,23 @@ The code examples in this repository demonstrate how to apply CRTP in practice.
 We create various character types that each implement a specific attack method. 
 We then have two template functions triggerAttackActionRef and triggerAttackActionPtr that can accept a reference and a pointer to any Character<T> respectively. 
 These functions call the performAttack method on the passed character, which internally uses CRTP to call the appropriate executeAttack method on the actual derived class.
+
+# Advantages of CRTP:
+
+Compile-time Polymorphism: More efficient code without the overhead of virtual functions.
+
+Type Safety: Errors caught at compile-time instead of runtime.
+
+No Virtual Table: Saves memory by avoiding the overhead of the virtual table.
+
+# Disadvantages of CRTP:
+
+Code Complexity: CRTP can make code harder to read and maintain.
+
+Limited to Compile-time: Doesn't support runtime polymorphism.
+
+Inflexibility: Once a base class is set in CRTP, it cannot change.
+
+Increase in Binary Size: May lead to larger binary size due to separate copies of code for different template parameters.
+
+Inheritance Limitation: A class can't inherit the same base class template more than once with different template arguments.
